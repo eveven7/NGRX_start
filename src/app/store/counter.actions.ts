@@ -1,15 +1,20 @@
 import { Action, createAction, props } from '@ngrx/store';
 
-// export const increment = createAction(
-//   '[Counter] Increment',
-//   props<{ value: number }>()// data atachable to the action
-// );
+export const increment = createAction(
+  '[Counter] Increment',
+  props<{ value: number }>()// data atachable to the action
+);
 
-export const INCREMENT = '[Counter] Increment'
-export class IncrementAction implements Action {
-  readonly type = INCREMENT;
+export const decrement = createAction(
+  '[Counter] Decrement',
+  props<{ value: number }>()// data atachable to the action
+);
 
-  constructor(public value: number) {}
-}
+// export const INCREMENT = '[Counter] Increment'
+// export class IncrementAction implements Action {
+//   readonly type = INCREMENT;
 
-export type CounterActions = IncrementAction;
+//   constructor(public value: number) {}
+// }
+
+// export type CounterActions = IncrementAction;
